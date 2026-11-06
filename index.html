@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond BMI: Understanding Body Composition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>The BMI Misconception Matrix</h1>
+        <p class="subtitle">Click on each subject to analyze why weight loss doesn't always equal metabolic health.</p>
+    </header>
+
+    <div class="grid">
+        <!-- Case 1 -->
+        <div class="subject-card" id="card1" onclick="selectSubject(1)">
+            <div class="card-header">
+                <span class="subject-title">Subject A</span>
+                <span class="bmi-badge">BMI: 21</span>
+            </div>
+            <div class="comp-visualizer">
+                <div class="comp-bar bar-visceral" id="bar1-visceral"></div>
+                <div class="comp-bar bar-good-fat" id="bar1-goodfat"></div>
+                <div class="comp-bar bar-muscle" id="bar1-muscle"></div>
+            </div>
+            <div class="legend-mini">
+                <span class="legend-item"><span class="dot d-muscle"></span>Muscle</span>
+                <span class="legend-item"><span class="dot d-good-fat"></span>Subq Fat</span>
+                <span class="legend-item"><span class="dot d-visceral"></span>Visceral</span>
+            </div>
+            <div class="details">
+                <strong>"Skinny Fat" Risk Profile:</strong> Despite a mathematically ideal BMI of 21, she possesses critically low muscle mass and dangerously elevated internal visceral fat. This structure often mirrors unmonitored rapid weight loss where muscle tissue is lost instead of fat.
+            </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="subject-card" id="card2" onclick="selectSubject(2)">
+            <div class="card-header">
+                <span class="subject-title">Subject B</span>
+                <span class="bmi-badge">BMI: 24</span>
+            </div>
+            <div class="comp-visualizer">
+                <div class="comp-bar bar-visceral" id="bar2-visceral"></div>
+                <div class="comp-bar bar-good-fat" id="bar2-goodfat"></div>
+                <div class="comp-bar bar-muscle" id="bar2-muscle"></div>
+            </div>
+            <div class="legend-mini">
+                <span class="legend-item"><span class="dot d-muscle"></span>Muscle</span>
+                <span class="legend-item"><span class="dot d-good-fat"></span>Subq Fat</span>
+                <span class="legend-item"><span class="dot d-visceral"></span>Visceral</span>
+            </div>
+            <div class="details">
+                <strong>Metabolically Optimized Profile:</strong> Sitting right near the edge of the "normal" boundary at a BMI of 24, she is highly healthy. Her weight is predominantly driven by dense lean muscle tissue, keeping dangerous visceral fat near zero.
+            </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="subject-card" id="card3" onclick="selectSubject(3)">
+            <div class="card-header">
+                <span class="subject-title">Subject C</span>
+                <span class="bmi-badge">BMI: 36</span>
+            </div>
+            <div class="comp-visualizer">
+                <div class="comp-bar bar-visceral" id="bar3-visceral"></div>
+                <div class="comp-bar bar-good-fat" id="bar3-goodfat"></div>
+                <div class="comp-bar bar-muscle" id="bar3-muscle"></div>
+            </div>
+            <div class="legend-mini">
+                <span class="legend-item"><span class="dot d-muscle"></span>Muscle</span>
+                <span class="legend-item"><span class="dot d-good-fat"></span>Subq Fat</span>
+                <span class="legend-item"><span class="dot d-visceral"></span>Visceral</span>
+            </div>
+            <div class="details">
+                <strong>High Mass Symmetry Profile:</strong> Structurally complex case with a BMI of 36. This subject holds substantial fat mass but balances it with a highly robust foundation of functional skeletal muscle mass, displaying unexpected metabolic resilience.
+            </div>
+        </div>
+    </div>
+
+    <!-- Master Feedback Output Panel -->
+    <div class="status-panel" id="statusPanel">
+        <div class="status-title" id="statusTitle">Select a Subject Card Above</div>
+        <div class="status-desc" id="statusDesc">Click a card to see how tissue distribution alters systemic health outcomes independently of scale weight.</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
